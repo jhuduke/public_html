@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html>
+  <head><title>Jun Hu</title></head>
+  <meta name="author" content = "Jun Hu">
+  <meta name="keywords" content="jun hu, computer vision, computatinal photography, HDR, image registration">
+
+<style type="text/css">
+body {font:13px arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}select, input, textarea {font:99% arial,helvetica,clean,sans-serif;}pre, code {font:115% monospace;*font-size:100%;}body * {line-height:1.5em;}
+
+* {
+	margin: 0; padding:0; 
+	font-family: Verdana, Tahoma, sans-serif; 
+}
+
+body {
+	background-image:url('paper.jpg');
+	font-family: 'Fredericka the Great';
+	margin: 1em;}
+
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, 
+label, ul, ol, dl, li, fieldset, address { margin: 1em 0; }
+li, dd { margin-left:5%; }
+fieldset { padding: .5em; }
+code, pre {
+  font-family: monospace; 
+  font-size: 100%;
+  border: 1px solid #ccc;
+  background-color: #DCE6CF;
+}
+
+small {font-size: 0.8em;}
+blockquote {margin: 1em 1em; font-size: 0.9em;}
+
+code strong {font-family: monospace;}
+
+a:link, a:visited {color: #513058; }
+
+.movie, a img {border: 1px solid #ccc; padding: 2px;}
+
+h1 {font-size: 4em; font-weight: normal; margin-bottom: 0.4em;}
+h2 {font-size: 0.9em; font-weight: bold}
+h3 {font-size: 0.9em; font-weight: bold}
+
+#navbar {
+	position: absolute;
+	left: 1.5em;
+	top: 5em;
+	width:  8.9%;
+	font-size:  0.85em;
+	padding: 0 0.5em 0 0;
+}
+#navbar * { margin: 0 0 0.25em 0; text-align:  right;}
+#navbar h2 {border:  none; font-size:  1em; padding:  0; border-top:  1px solid #ccc; font-weight: normal; margin-top: 0.65em; padding-top:  0.35em;}
+#navbar ul {list-style:  none;}
+
+#wrap {margin: 3em 15%;}
+
+#footer {margin: 0 15%; font-size:0.85em; border-top: 1px solid #ccc;  padding: 0.5em;}
+#footer p {margin: 0.5em 0;}
+
+#examples {width: 150px; float: right; margin: 5px; margin-right: -3em;}
+#examples img {margin-bottom: 10px;}
+#examples a:hover {background-color: #fff;}
+#examples a:hover img {border-color: #333;}
+
+
+/* Colour inspiration: 
+http://wellstyled.com/tools/colorscheme2/index-en.html?compl;50;0;150;0.5;-0.9;0.5;0.5;0.1;0.9;0.75;0.75;0.5;-0.9;0.5;0.5;0.1;0.9;0.75;0.75;0.5;-0.9;0.5;0.5;0.1;0.9;0.75;0.75;0.5;-0.9;0.5;0.5;0.1;0.9;0.75;0.75;0
+
+Greens     Purples
+#DCE6CF     #E6CFE0
+#86BF30     #BF309B
+#B8E673     #B85CA1
+#668040     #804070
+*/
+
+a:link, a:visited {color: #804070;}
+a:hover {background-color: #DCE6CF }
+
+td.caption {font-size: 0.9em; color: #333; padding: 4px; background-color:#e9e9e9;}
+
+.box {
+	margin: auto;
+	border-left: 5px solid #668040;
+	background-color: #DCE6CF;
+}
+.box p {margin: 0.3em 0;}
+
+.box, h1, h2 {
+	padding: 1px 0 1px 5px;
+}
+
+h1 {
+	/*border-left: 8px solid #804070;*/
+	margin-left: -23px;
+	padding-left: 10px;
+}
+
+h2 {jh214@duke
+
+	/*border-left: 3px solid #668040;*/
+	margin-left: -8px;
+}
+
+h1 {margin-bottom: 0;}
+h2.subhead {margin-top: 0; border-left: 0; margin-bottom: 2em;}
+
+@media print {
+	html * {font-size: 10pt;}
+	h1 {font-size: 14pt; margin: 0 0 0.5em 0;}
+	#navbar {display: none;}
+	#footer {margin: 1em 0 0 0;}
+	#wrap {margin: 0;}
+	
+}
+
+/* Table formatting -------------------- */
+
+table {border-collapse: collapse; margin-bottom: 1.5em;}
+td, th {vertical-align: top; padding-right: 1em;}
+th {font-weight: bold; text-align: left; font-size: 0.8em; border-bottom: 1px solid #666;}
+tr td {padding-bottom: 0.25em;}
+tr.first td {padding-top: 1em;}
+
+/* Home page ------------------------- */ 
+
+#contact {
+  float: right;
+  width: 18em;
+  padding: 0 0 0 5px;
+  margin-left: 1em;
+  /*border-left: 3px solid #668040;*/
+}
+#contact ul {list-style: none; margin: 0;}
+#contact li {margin: 0.5em 0 0 0;}
+#contact h2 {margin: 0 0 0 0; border-left: none; padding-left: 0;}
+
+#citationimage { float: left; width: 100px; }
+#citationbody { float: right;  width: 600px;}
+
+/* Teaching --------------------------- */
+
+tr.topic td {padding-top: 1em; font-weight: bold; font-size: 0.9em; }
+.last { border: 2px solid #804070; padding: 0.5em; background-color: #fafafa;}
+.last h2 {margin: 0; padding: 0; border: none;}
+</style>
+</head>
+
+<body>
+<div id="navbar">
+			</div>
+	<div id="wrap">
+<h1>Jun Hu</h1>
+<b>Ph.D :)
+</b><br>
+
+<div id="contact">
+<img src="figs/DSC_0224.jpg" width="180" height="180" />
+<ul>
+	<li><a href="mailto:junhu@alumni.duke.edu ">junhu@alumni.duke.edu </a></li>
+	<li>Department of Computer Science</li>
+	<li>Duke University, NC</li>	
+</ul> 
+</div>
+
+<br>
+I defended my dissertation on March 20, 2014 and now I am Dr. who. </br>
+In May 2009, I earned my Bachelor degree in Computer Science from <a href="http://www.whu.edu.cn">Wuhan University</a>. 
+From July 2011 to Dec. 2011, I was an intern at <a href="http://research.nvidia.com/"> Nvidia research </a> with 
+<a href="http://people.csail.mit.edu/kapu/">Dr. Kari Pulli</a> 
+and <a href="http://research.nvidia.com/users/orazio-gallo">Dr. Orazio Gallo</a>.
+Since Oct, 2013, I joined Apple Inc. as an Imaging Algorithm Engineer.  
+ </br>
+
+<p>
+My research interests include computer vision, computational photography and scientific computing. 
+
+<h2>Selected Publications</h2>
+<table>
+	<tr>
+		<td>
+			<img src='CVPR2013/Data/Dome/Tonemap.jpg' width='100' />
+  		</td>
+		<td>  Jun Hu, Orazio Gallo, Kari Pulli and Xiaobai Sun<br>
+<a href='CVPR2013/JHu_OGallo_KPulli_XSun_CVPR2013.pdf'>HDR Deghosting: How to deal with Saturation ?</a> <br>
+CVPR, Portland, Oregon, June 2013 <br>
+<a href='CVPR2013/'>Website</a>
+</p>
+		</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td>
+			<img src='ECCV2012/Imgs/Ocean/Fusion.jpg' width='100' />
+  		</td>
+		<td>  Jun Hu, Orazio Gallo and Kari Pulli <br>
+<a href='ECCV2012/jhu_ogallo_kpulli_eccv2012.pdf'>Exposure Stacks of Live Scene With Hand-held Cameras</a><br>
+ECCV, Florence, Italy, Oct. 2012 <br>
+<a href='ECCV2012'>Website</a>
+</p>
+		</td>
+	</tr>
+</table>
+
+<!--
+<h2>Talks</h2>
+<ul>
+  <li style="margin-bottom: -10px;">Nvidia Research Intern Report, Fast Non-rigid Registration: From mins to secs, June. 2013</li>
+  <li style="margin-bottom: -10px;">Phd Prelim Exam: HDR Image Reconstruction from Exposure Stacks of Live Scene with 
+  Hand-held Cameras <a href="JunHu_Prelim_Nov_06_Tentative.pdf">[pdf]</a> Department of Computer Science, Duke Univ. Nov. 2012</li>
+  <li style="margin-bottom: -10px;">Nvidia Research Intern Report, Non-rigid Registration for HDR Exposure Stacks, Dec. 2011</li>
+</ul>
+</br>
+
+<h2>Awards</h2>
+<ul>
+  <li style="margin-bottom: -10px;">Best Teaching Assistant, Department of Computer Science, Duke Univ. 2010-2011</li>
+  <li style="margin-bottom: -10px;">Duke Graduate Fellowship, 2009-2011</li>
+  <li style="margin-bottom: -10px;">National Fellowship, Ministry of Education, P.R.China, 2005-2009</li>
+  <li style="margin-bottom: -10px;">Numerous Undergrad student awards in China, 2005-2009</li>
+</ul>
+</br>
+-->
+
+
+</div>
+
+</body>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9115076; 
+var sc_invisible=1; 
+var sc_security="654b9e03"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9115076/0/654b9e03/1/"
+alt="web analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</html>   
